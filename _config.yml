@@ -1,0 +1,76 @@
+---
+title: F4ERP
+timezone: America/New_York
+collections:
+  posts:
+    title: Posts
+    output: true
+  blog_tags:
+    title: Tags
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: "/blog/:title/"
+    layout: post
+    image: 
+    description: 
+    button:
+      title: 
+      url: 
+- scope:
+    path: ''
+    type: blog_tags
+  values:
+    layout: tag
+
+url: https://www.f4erp.com
+description: F4ERP is platform that helps you quickly develop and improve the organisation and collaborate with the people.
+permalink: pretty
+exclude:
+- Gruntfile.js
+- Gemfile
+- Gemfile.lock
+- package.json
+- package-lock.json
+- README*
+- node_modules
+- feed.xml
+- feed.json
+- ".gitignore"
+plugins:
+- jekyll-seo-tag
+- jekyll-sitemap
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+excerpt_separator: |2+
+
+
+
+sass:
+  sass_dir: styles/
+  style: compressed
+per_page: 10
+date_format: "%b %d, %Y"
+google_analytics: UA-101026434-1
+twitter:
+  username: httpsOmkar
+logo: "/assets/logo.svg"
+future: true
+header_nav:
+  Blog: "/blog/"
+  Log in: https://console.tracking.f4erp.com
+footer_nav:
+  Features: "/features/"
+  Privacy: "/privacy/"
+  Terms: "/terms/"
+  GDPR: "/gdpr/"
+scripts: ''
